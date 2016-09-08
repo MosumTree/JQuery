@@ -1,0 +1,126 @@
+<!DOCTYPE html  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.1.0.js"></script>
+	<style type="text/css">
+	a>img{
+		width: 250px;
+		height: 200px;
+	}
+	</style>
+</head>
+<body>
+	<!-- <p title="选择你最喜欢的水果。">你最喜欢的水果是？</p>
+<ul>
+	<li title="苹果">苹果</li>
+	<li title="橘子">橘子</li>
+	<li title="菠萝">菠萝</li>
+</ul>
+
+<p class="test">我想说</p>
+
+<input type="text" id="address" value="请输入邮箱地址"/>
+<input type="text" id="password" value="请输入邮箱密码"/>
+<input type="button" value="登录"/>
+-->
+<a href="image/iphone.jpg" class="tooltip" title="iphone"><img src="image/iphone.jpg"></a>
+<a href="image/ipad.jpg" class="tooltip" title="ipad"><img src="image/ipad.jpg"></a>
+<a href="image/iwatch.jpg" title="iwatch"><img src="image/iwatch.jpg"></a>
+<a href="image/imacbook.jpg" title="imacbook"><img src="image/imacbook.jpg"></a>
+<script type="text/javascript">
+	var x=100;
+	var y=200;
+	$("a").mouseover(function(e){
+		this.myTitle=this.title;
+		this.title="";
+		var tooltip="<div id='tooltip'><img src='"+this.href+"' alt='产品预览图'/></div>";
+		$("body").append(tooltip);
+		$("#tooltip").css({
+			"position":"absolute",
+			"top":(e.pageY+y)+"px",
+			"left":(e.pageX+x)+"px"
+		}).show("slow");
+
+	}).mouseout(function(){
+		this.title=this.myTitle;
+		$("#tooltip").remove();
+	}).mousemove(function(e){
+		$("#tooltip").css({
+			"position":"absolute",
+			"top":e.pageY+"px",
+			"left":e.pageX+"px",
+			"border":"1px solid black"
+		});
+	});
+
+		/*var $li=$("ul li:eq(1)");
+		var li_txt=$li.text();
+		alert(li_txt);*/
+
+		/*var $para=$("p");
+		var p_txt=$para.attr("title");
+		alert(p_txt);*/
+
+		/*var $li_1=$("<li title='香蕉'>香蕉</li>");
+		var $li_2=$("<li title='西瓜'>西瓜</li>");
+		$("ul").append($li_1);
+		$("ul").append($li_2);*/
+
+		//$("p.test").append("<b>hello</b>")
+		//$("<b>hello</b>").appendTo("p.test")
+		//prepend prependto  after insertAfter before insertBefore
+
+		/*var $li=$("ul li:eq(1)").remove();
+		$li.appendTo("ul");*/
+		//$("ul li").remove("li[title!=菠萝]");
+		//detach()  empty()
+
+		/*$("ul li").click(function () {
+			$(this).clone().appendTo("ul");
+			// body...
+		})*/
+
+		//$("p:first").replaceWith("<strong>你最喜欢的水果是？</strong>")
+		//$("<strong>你最喜欢的水果是？</strong>").replaceAll("p")
+
+		//wrap(),wrapAll(),wrapInner(),attr(),removeClass(),addClass(),toggle(),toggleClass(),hasClass()
+
+		// var p_html=$("p").html();
+		// alert(p_html);
+
+		/*$("#address").focus(function(){
+			var txt_value=$(this).val();
+			if (txt_value=="请输入邮箱地址") {
+				$(this).val("");
+			}
+		});
+		$("#address").blur(function(){
+			var txt_value=$(this).val();
+			if (txt_value=="") {
+				$(this).val("请输入邮箱地址");
+			}
+		});
+		$("#password").focus(function(){
+			var txt_value=$(this).val();
+			if (txt_value=="请输入邮箱密码") {
+				$(this).val("");
+			}
+		});
+		$("#password").blur(function(){
+			var txt_value=$(this).val();
+			if (txt_value=="") {
+				$(this).val("请输入邮箱密码");
+			}
+		});*/
+
+		//children()  next()  prev()  siblings()
+		//parent() parents() closet()
+
+		//CSS DOM
+		//offset() position()  scrollTop() scrollLeft()
+	</script>
+</body>
+</html>

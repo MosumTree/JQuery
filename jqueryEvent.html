@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.1.0.js"></script>
+	<link rel="stylesheet" type="text/css" href="eventmain.css">
+</head>
+<body>
+<!-- /* <style type="text/css">
+		#panel{
+			position: relative;
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			background: #96e555;
+			cursor: pointer;
+		} 
+	</style>*/ -->
+	<!-- 
+	**********************************************************************
+	一·事件
+
+	1.加载dom(dom记载好后即可执行)
+	$(document).ready(function(){})
+	or
+	$().ready(function(){})
+	or
+	$(function(){})
+
+	2.事件绑定
+	bind(type [, data],fn)
+	参数分别对应事件类型（如click，focus），额外数据参数，处理函数
+	也可简写为上一章.mouseover(function(){}).mousemove...;
+
+	3.合成事件
+	hover(enter,leave):鼠标移进触发enter，移除触发leave
+	toggle(fn1,fn2,..):鼠标每次点击依次触发
+
+	4.事件冒泡
+	嵌套的标签都绑定了事件，点击最底层元素，会像冒泡一样由底至顶触发
+	在function中加入event.stopPropagation()可停止事件冒泡
+	event.preventDefault()可阻止默认事件（或写为return false）
+
+	5.事件对象属性
+	查手册
+
+	6.移除事件
+	$("#btn").unbind("click","myfunc");
+
+	7.模拟操作
+	$(..).trigger("click");
+	or
+	$(..).click();
+	triggerHandler() 不触发浏览器默认操作
+	8.其他事件
+	bind绑定多个事件
+	添加事件命名空间
+
+
+    ***************************************************************
+
+	二·动画
+
+	
+	1.show()  hide()
+	$(element).hide();
+	==$(elemnet).css("display","none");
+	参数fast，normal，slow分别代表200ms,400ms,600ms内显示，也可指定毫秒数
+
+	2.fadeIn()  fadeOut()
+	淡入淡出效果
+
+	3.slideUp()  slideDown()
+	由下至上和由上至下显示
+
+	4.animate()自定义动画
+	animate(params,speed,callback);
+	参数对应 样式属性及值得映射，速度，动画完成时执行的函数
+
+	5.停止元素动画stop()
+	stop([clearQueue],[gotoEnd]);
+	都是可选参数，代表是否清空未执行完的动画的队列和是否直接将正在执行的动画跳转的末状态
+
+	6.toggle() slideToggle() fadeTo() fadeToggle() 
+
+	*******************************************************************
+	 -->
+
+	 <!-- <div id="panel"></div>
+	 <script type="text/javascript">
+	 	$(function(){
+	 		$("#panel").css("opacity","0.5");
+	 		$("#panel").click(function(){
+	 			$(this).animate({left:"+=500px",top:"200px",opacity:"1"},3000)
+	 					.animate({height:"200px"},3000)
+	 					.fadeOut("slow");
+	 		});
+	 	})
+	 </script> -->
+	 <div class="v_show">
+	 	<div class="v_caption">
+	 		<h2 class="cartoon">卡通动漫</h2>
+	 		<div class="highlight_tip">
+	 			<span class="current"><img src="icon/whitecircle.png"></span><span><img src="icon/whitecircle.png"></span><span><img src="icon/whitecircle.png"></span><span><img src="icon/whitecircle.png"></span>
+	 		</div>
+	 		<div class="change_btn">
+	 			<span class="prev"><img src="icon/left.png"></span>
+	 			<span class="next"><img src="icon/right.png"></span>
+	 		</div>
+	 	</div>
+	 	<div class="v_content">
+	 		<div class="v_content_list">
+	 			<ul>
+	 				<li>
+	 					<a href="#"><img src="image/onepiece.jpg"></a>
+	 					<h4><a href="#">海贼王</a></h4>
+	 					<span>播放 <em>28,276</em></span>
+	 				</li>
+	 				<li>
+	 					<a href="#"><img src="image/onepiece.jpg"></a>
+	 					<h4><a href="#">海贼王</a></h4>
+	 					<span>播放 <em>28,276</em></span>
+	 				</li>
+	 				<li>
+	 					<a href="#"><img src="image/dragonball.jpg"></a>
+	 					<h4><a href="#">七龙珠</a></h4>
+	 					<span>播放 <em>28,276</em></span>
+	 				</li>
+	 				<li>
+	 					<a href="#"><img src="image/dragonball.jpg"></a>
+	 					<h4><a href="#">七龙珠</a></h4>
+	 					<span>播放 <em>28,276</em></span>
+	 				</li>
+	 				<li>
+	 					<a href="#"><img src="image/onepiece.jpg"></a>
+	 					<h4><a href="#">海贼王</a></h4>
+	 					<span>播放 <em>28,276</em></span>
+	 				</li>
+	 				<li>
+	 					<a href="#"><img src="image/onepiece.jpg"></a>
+	 					<h4><a href="#">海贼王</a></h4>
+	 					<span>播放 <em>28,276</em></span>
+	 				</li>
+	 				<li>
+	 					<a href="#"><img src="image/dragonball.jpg"></a>
+	 					<h4><a href="#">七龙珠</a></h4>
+	 					<span>播放 <em>28,276</em></span>
+	 				</li>
+	 				<li>
+	 					<a href="#"><img src="image/dragonball.jpg"></a>
+	 					<h4><a href="#">七龙珠</a></h4>
+	 					<span>播放 <em>28,276</em></span>
+	 				</li>
+	 				<li>
+	 					<a href="#"><img src="image/onepiece.jpg"></a>
+	 					<h4><a href="#">海贼王</a></h4>
+	 					<span>播放 <em>28,276</em></span>
+	 				</li>
+	 				<li>
+	 					<a href="#"><img src="image/onepiece.jpg"></a>
+	 					<h4><a href="#">海贼王</a></h4>
+	 					<span>播放 <em>28,276</em></span>
+	 				</li>
+	 				<li>
+	 					<a href="#"><img src="image/dragonball.jpg"></a>
+	 					<h4><a href="#">七龙珠</a></h4>
+	 					<span>播放 <em>28,276</em></span>
+	 				</li>
+	 				<li>
+	 					<a href="#"><img src="image/dragonball.jpg"></a>
+	 					<h4><a href="#">七龙珠</a></h4>
+	 					<span>播放 <em>28,276</em></span>
+	 				</li>
+	 				<li>
+	 					<a href="#"><img src="image/onepiece.jpg"></a>
+	 					<h4><a href="#">海贼王</a></h4>
+	 					<span>播放 <em>28,276</em></span>
+	 				</li>
+	 				<li>
+	 					<a href="#"><img src="image/onepiece.jpg"></a>
+	 					<h4><a href="#">海贼王</a></h4>
+	 					<span>播放 <em>28,276</em></span>
+	 				</li>
+	 				<li>
+	 					<a href="#"><img src="image/dragonball.jpg"></a>
+	 					<h4><a href="#">七龙珠</a></h4>
+	 					<span>播放 <em>28,276</em></span>
+	 				</li>
+	 				<li>
+	 					<a href="#"><img src="image/dragonball.jpg"></a>
+	 					<h4><a href="#">七龙珠</a></h4>
+	 					<span>播放 <em>28,276</em></span>
+	 				</li>
+	 			</ul>
+	 		</div>
+	 	</div>
+	 </div>
+
+	 <script type="text/javascript">
+	 	$(".next").click(function(){
+	 		var page=1;
+	 		var i=4;
+	 		var $parent=$(this).parents("div.v_show");
+	 		var $v_show=$parent.find("div.v_content_list");
+	 		var $v_content=$parent.find("div.v_content");
+	 		
+
+	 		var len=$v_show.find("li").length;
+	 		
+	 		var v_width=$v_content.width();
+	 		var page_count=Math.ceil(len/i);
+	 		alert(v_width);
+	 		if (page==page_count) {
+	 			$v_show.animate({left:"0px"},normal);alert(page_count);
+	 			page=1;
+	 		}
+	 		else{
+	 			alert(v_width);
+	 			$v_show.animate({left:"-="+v_width},normal);
+	 			page++;
+	 		}
+	 	}).mouseover(function(){
+	 		$(".next img").css("opacity","0.5");
+	 	}).mouseout(function(){
+	 		$(".next img").css("opacity","1");
+	 	});
+	 </script>
+</body>
+</html>

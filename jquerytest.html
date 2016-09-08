@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.1.0.js"></script>
+	<link rel="stylesheet" type="text/css" href="testmain.css">
+</head>
+<body>
+<!-- <div class="box">
+	<ul class="menu">
+		<li class="level1">
+			<a href="#">衬衫</a>
+			<ul class="level1">
+				<li><a href="#">短袖衬衫</a></li>
+				<li><a href="#">短袖衬衫</a></li>
+				<li><a href="#">短袖衬衫</a></li>
+				<li><a href="#">短袖衬衫</a></li>
+			</ul>
+		</li>
+		<li class="level1">
+			<a href="#">卫衣</a>
+			<ul class="level1">
+				<li><a href="#">短袖衬衫</a></li>
+				<li><a href="#">短袖衬衫</a></li>
+				<li><a href="#">短袖衬衫</a></li>
+				<li><a href="#">短袖衬衫</a></li>
+			</ul>
+		</li>
+		<li class="level1">
+			<a href="#">裤子</a>
+			<ul class="level1">
+				<li><a href="#">短袖衬衫</a></li>
+				<li><a href="#">短袖衬衫</a></li>
+				<li><a href="#">短袖衬衫</a></li>
+				<li><a href="#">短袖衬衫</a></li>
+			</ul>
+		</li>
+	</ul>
+</div> -->
+	<!-- <input type="checkbox" id="cr"/><label for="cr">我已经阅读了上面的制度</label>
+	<p class="demo">click it</p>
+	<table id="tb">
+		<tbody>
+			<tr><td>第一行</td><td>第一行</td></tr>
+			<tr><td>第一行</td><td>第一行</td></tr>
+			<tr><td>第一行</td><td>第一行</td></tr>
+			<tr><td>第一行</td><td>第一行</td></tr>
+			<tr><td>第一行</td><td>第一行</td></tr>
+		</tbody>
+	</table> -->
+
+	<!-- <div class="one" id="one">
+		the div whose id and class id one
+		<div class="mini">class is mini</div>
+	</div>
+	<div class="one" id="two" title="test">
+		id is two,class is one,title is test
+		<div class="mini" title="other">class is mini,title is other</div>
+		<div class="mini" title="test">class is mini,title is test</div>
+	</div>
+	<div class="one">
+		<div class="mini">class is mini</div>
+		<div class="mini">class is mini</div>
+		<div class="mini">class is mini</div>
+		<div class="mini"></div>
+	</div>
+	<div class="one">
+		<div class="mini">class is mini</div>
+		<div class="mini">class is mini</div>
+		<div class="mini">class is mini</div>
+		<div class="mini" title="tesst">class is mini,title is tesst</div>
+	</div>
+	<div style="display: none;" class="one">the display of style is none</div>
+	<div class="hide">class is hide</div>
+	<div>
+		包含input的type为"hidden"的div<input type="hidden" />
+	</div>
+	<span id="mover">正在执行动画的span元素</span> -->
+	
+	<div class="SubCategoryBox">
+		<div class="uldiv">
+		<ul>
+			<li><a href="#">佳能</a><i>(30440)</i></li>
+			<li><a href="#">索尼</a><i>(30440)</i></li>
+			<li><a href="#">三星</a><i>(30440)</i></li>
+			<li><a href="#">尼康</a><i>(30440)</i></li>
+			<li><a href="#">松下</a><i>(30440)</i></li>
+			<li><a href="#">卡西欧</a><i>(30440)</i></li>
+			<li><a href="#">富士</a><i>(30440)</i></li>
+			<li><a href="#">柯达</a><i>(30440)</i></li>
+			<li><a href="#">宾得</a><i>(30440)</i></li>
+			<li><a href="#">理光</a><i>(30440)</i></li>
+			<li><a href="#">奥林巴斯</a><i>(30440)</i></li>
+			<li><a href="#">明基</a><i>(30440)</i></li>
+			<li><a href="#">爱国者</a><i>(30440)</i></li>
+			<li><a href="#">其他品牌相机</a><i>(30440)</i></li>
+			</div>
+		<div class="showmore">
+			<a href="#"><span>显示全部商品</span></a>
+		</div>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		/*$(".level1>a").click(function(){
+			$(this).addClass("current")//给当前元素添加“cuurrent”样式
+				.next().show()//下一个元素显示
+				.parent().siblings().children("a").removeClass("current")//父元素的同辈元素的子元素<a>移除“”样式
+				.next().hide();//他们的下一个元素隐藏
+			return false;
+		})
+		$(document).ready(function(){
+			var $cr=$("#cr");
+			var cr=$cr[0];
+			$cr.click(function(){
+				if ($cr.is(":checked")) {
+					alert("感谢你的支持，你可以继续操作！");
+				}
+			})
+		})
+		$(".demo").click(function(){
+			alert("jquery demo!");
+		})
+		var item=document.getElementById("tb");
+		var tbody=item.getElementsByTagName("tbody")[0];
+		var trs=tbody.getElementsByTagName("tr");
+		for (var i = 0; i <trs.length; i++) {
+			if (i%2==0) {
+				trs[i].style.backgroundColor="#888";
+			}
+		}*/
+		//基本选择器
+		/*$("#one").css("background","#11ffaa");
+		$(".mini").css("background","#bbffaa");
+		$("div").css("background","#bbffaa");
+		$("span,#two").css("background","#bbffaa");*/
+
+
+		//层次选择器
+		/*//$("body div").css("background","#bbffaa");//change all div in body
+		//$("body>div").css("background","#bbffaa");//change subdiv in body
+		$(".one+div").css("background","#bbffaa");//change next one same level
+		$("#two~div").css("background","#bbffaa");//change next all same level*/
+
+
+		/*//过滤选择器
+		$("div:first").css("background","#bbffaa");//change first div
+		$("div:last").css("background","#bbffaa");
+		$("div:not(.one)").css("background","#bbffaa");//change div whose class is not one
+		//$("div:even").css("background","#bbffaa");//change div whose index is even
+		//$("div:one").css("background","#bbffaa");//change div whose index is odd
+		//$("div:eq(3)").css("background","#bbffaa");//change div whose index is 3
+		$("div:gt(3)").css("background","#bbffaa");//change div whose index is even
+		$("div:lt(3)").css("background","#bbffaa");//change div whose index is even
+		$(":header").css("background","#bbffaa");//change div whose index is even
+		$(":animated").css("background","#bbffaa");//change div whose index is even
+		$(":focus").css("background","#bbffaa");//change div whose index is even
+		//内容过滤器
+		$("div:contains(di)").css("background","#bbffaa");
+		$("div:empty").css("background","#bbffaa");
+		$("div:parent").css("background","#bbffaa");
+		$("div:not(.one)").css("background","#bbffaa");
+		$("div:has('.mini')").css("background","#bbffaa");
+		//可见过滤器
+		$("div:visible").css("background","#bbffaa");
+		$("div:hidden").css("background","#bbffaa");
+		//属性过滤器
+		$("div[title]").css("background","#bbffaa");
+		$("div:[title=test]").css("background","#bbffaa");
+		$("div:[title^=te]").css("background","#bbffaa");
+		$("div:[title$=st]").css("background","#bbffaa");
+		$("div:[title*=es]").css("background","#bbffaa");
+		$("div:[id][title*=es]").css("background","#bbffaa");
+		//子元素过滤器
+		$("div.one:nth:child(2)").css("background","#bbffaa");
+		$("div.one:first-child").css("background","#bbffaa");
+		$("div.one:last-child").css("background","#bbffaa");
+		$("div.one:only-child").css("background","#bbffaa");*/
+
+		//表单选择器：很重要，但是我不讲
+
+		var $category = $("ul li:gt(5):not(:last)");
+		$category.hide();
+		var $toggleBtn = $("div.showmore > a");
+		$toggleBtn.click(function(){
+			if ($category.is(":visible")){
+				$category.hide();
+				$(this).find("span")
+					.text("显示全部品牌");
+			}
+			else{
+			$category.show();
+			$(this).find("span")
+				.text("精简显示品牌");
+					}
+			return false;
+		});
+        
+
+	</script>
+</body>
+</html>
